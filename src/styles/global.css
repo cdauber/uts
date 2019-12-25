@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+}
+
+nav {
+  text-align: center;
+}
+nav img {
+  position: absolute;
+  left: 0;
+}
+nav ul {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover:not(.active) {
+  border-top: 2px solid;
+  border-color: darkgrey;
+  padding-top: 12px;
+}
+
+nav li .active {
+  border-top: 2px solid;
+  border-color: black;
+  padding-top: 12px;
+}

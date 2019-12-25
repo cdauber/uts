@@ -1,23 +1,29 @@
 import React from "react"
+import { Link } from "gatsby"
 
 export default () => (
-  <header>
-    <a id="logo" href="/">
-      UTS
-    </a>
-    <nav>
-      <ul>
-        <li class="first">
-          <a class="first" href="/profile" target="_blank">
-            About
-          </a>
-        </li>
-        <li class="">
-          <a class="" href="/works" target="_blank">
-            Works
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </header>
+  <nav>
+    <ul>
+      <li>
+        <Link to="/" activeClassName="active">
+          Home
+        </Link>
+      </li>
+      <li>
+        <Link to="getInvolved" activeClassName="active">
+          Get Involved
+        </Link>
+      </li>
+      <li>
+        <Link to="currentSeason" activeClassName="active">
+          Current Season
+        </Link>
+      </li>
+      <li>
+        <Link to="about" activeClassName="active">
+          About
+        </Link>
+      </li>
+    </ul>
+  </nav>
 )

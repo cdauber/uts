@@ -1,9 +1,9 @@
 import React from "react"
+import Header from "../components/Header"
 
 export default () => (
-  <div style={{ color: `purple` }}>
-    <h1>Hello Gatsby!</h1>
-    <p>What a world.</p>
-    <img src="https://source.unsplash.com/random/400x200" alt="" />
+  <div>
+    <Header />
+    <p>Home Page</p>
   </div>
 )
