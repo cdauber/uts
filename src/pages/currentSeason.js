@@ -2,12 +2,14 @@ import React from "react"
 import Header from "../components/Header"
 import CurrentSeasonShow from "../components/CurrentSeasonShow"
 import { makeStyles } from "@material-ui/core/styles"
-import Paper from "@material-ui/core/Paper"
 import Grid from "@material-ui/core/Grid"
 
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
+  },
+  grid: {
+    justifyContent: "space-around",
   },
   paper: {
     padding: theme.spacing(2),
@@ -16,34 +18,25 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-export default AutoGrid => {
+export default () => {
   const classes = useStyles()
 
   return (
-    <div className={classes.root} style={{ padding: 20 }}>
+    <div>
       <Header />
-      <Grid container spacing={3}>
-        <Grid item md>
-          <Paper className={classes.paper}>xs</Paper>
+      <div className={classes.root} style={{ padding: 20 }}>
+        <Grid className={classes.grid} container spacing={3}>
+          <Grid item md>
+            <CurrentSeasonShow test="hi" />
+          </Grid>
+          <Grid item md>
+            <CurrentSeasonShow test="pls" />
+          </Grid>
+          <Grid item md>
+            <CurrentSeasonShow test="NA" />
+          </Grid>
         </Grid>
-        <Grid item md>
-          <Paper className={classes.paper}>xs</Paper>
-        </Grid>
-        <Grid item md>
-          <Paper className={classes.paper}>xs</Paper>
-        </Grid>
-      </Grid>
-      <Grid container spacing={3}>
-        <Grid item xs>
-          <Paper className={classes.paper}>xs</Paper>
-        </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>xs=6</Paper>
-        </Grid>
-        <Grid item xs>
-          <Paper className={classes.paper}>xs</Paper>
-        </Grid>
-      </Grid>
+      </div>
     </div>
   )
 }
