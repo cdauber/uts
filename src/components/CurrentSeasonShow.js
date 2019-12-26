@@ -55,63 +55,62 @@ export default props => {
 
   return (
     <Card className={classes.card} variant="outlined">
-      <CardMedia
-        className={classes.media}
-        image="https://img1.wsimg.com/isteam/ip/83e7a1d1-9f8c-4e97-a06b-a1255d0a53a9/fallnewworks-fb%20(1).jpg"
-        title="Anon"
-      />
+      {props.imageData && (
+        <CardMedia
+          className={classes.media}
+          image={props.imageData[0].url}
+          title={props.showName}
+        />
+      )}
       <CardContent>
-        <Typography className={classes.title} variant="h5">
-          Burning Man {props.test}
-        </Typography>
-        <Typography className={classes.pos} color="textSecondary">
-          by Gabriela Tedeschi <br />
-          Directed by Carol Lee
-        </Typography>
-        <Typography className={classes.showTime} variant="h6">
-          November 25th-27th
-        </Typography>
+        {props.showName && (
+          <Typography className={classes.title} variant="h5">
+            {props.showName}
+          </Typography>
+        )}
+        {props.playwright && (
+          <Typography className={classes.pos} color="textSecondary">
+            by {props.playwright} <br />
+            Directed by {props.director}
+          </Typography>
+        )}
+        {props.showDates && (
+          <Typography className={classes.showTime} variant="h6">
+            {props.showDates}
+          </Typography>
+        )}
       </CardContent>
 
       <CardActions
         style={{ justifyContent: "space-between", alignItems: "center" }}
       >
-        <Button variant="contained" href="#BPT Link">
-          Buy Tickets
-        </Button>
-
-        <IconButton
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
-          edge={true}
-        >
-          <Typography variant="button">
-            Read {expanded ? "less" : "more"}
-          </Typography>
-          <ExpandMoreIcon
-            className={clsx(classes.expand, {
-              [classes.expandOpen]: expanded,
-            })}
-          />
-        </IconButton>
+        {props.bptLink && (
+          <Button variant="contained" href={props.bptLink}>
+            Buy Tickets
+          </Button>
+        )}
+        {props.descriptionBlurb && (
+          <IconButton
+            onClick={handleExpandClick}
+            aria-expanded={expanded}
+            aria-label="show more"
+            edge={true}
+          >
+            <Typography variant="button">
+              Read {expanded ? "less" : "more"}
+            </Typography>
+            <ExpandMoreIcon
+              className={clsx(classes.expand, {
+                [classes.expandOpen]: expanded,
+              })}
+            />
+          </IconButton>
+        )}
       </CardActions>
 
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph>
-            After a few successful dates, twenty-somethings Danny and Dalia see
-            the potential for a lasting relationship. But on the soon-to-be
-            couple’s fifth date, Danny decides that before things get serious,
-            he needs to open up to Dalia about an idiosyncrasy of his: to cope
-            with the death of his mother and other sources of anger in his life,
-            Danny starts forest fires. As Danny and Dalia passionately debate
-            anger management techniques and the ethics of burning down forests
-            in the middle of the restaurant, Danny and their very irritated
-            waitress act out memories from Danny’s path to arson in an attempt
-            to persuade Dalia to give Danny a chance. Or at least refrain from
-            calling the police.
-          </Typography>
+          <Typography paragraph>{props.descriptionBlurb}</Typography>
         </CardContent>
       </Collapse>
     </Card>

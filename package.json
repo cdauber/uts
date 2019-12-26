@@ -17,6 +17,7 @@
   "dependencies": {
     "@material-ui/core": "^4.8.0",
     "@material-ui/icons": "^4.5.1",
+    "airtable": "^0.8.1",
     "gatsby": "^2.18.12",
     "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
     "react": "^16.12.0",

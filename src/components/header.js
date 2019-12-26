@@ -13,21 +13,21 @@ export default () => (
         </Link>
       </li>
       <li>
-        <Link to="getInvolved" activeClassName="active">
+        <Link to="/getInvolved" activeClassName="active">
           <Typography variant="body1" gutterBottom>
             Get Involved
           </Typography>
         </Link>
       </li>
       <li>
-        <Link to="currentSeason" activeClassName="active">
+        <Link to="/currentSeason" activeClassName="active">
           <Typography variant="body1" gutterBottom>
             Current Season
           </Typography>
         </Link>
       </li>
       <li>
-        <Link to="about" activeClassName="active">
+        <Link to="/about" activeClassName="active">
           <Typography variant="body1" gutterBottom>
             About
           </Typography>
