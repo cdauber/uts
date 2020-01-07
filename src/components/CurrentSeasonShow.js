@@ -75,7 +75,12 @@ export default props => {
           </Typography>
         )}
         {props.showDates && (
-          <Typography className={classes.showTime} variant="h6">
+          <Typography
+            className={classes.showTime}
+            variant="h6"
+            style={{ whiteSpace: "pre-line" }}
+          >
+            {console.log(props.showDates)}
             {props.showDates}
           </Typography>
         )}
@@ -85,7 +90,7 @@ export default props => {
         style={{ justifyContent: "space-between", alignItems: "center" }}
       >
         {props.bptLink && (
-          <Button variant="contained" href={props.bptLink}>
+          <Button variant="contained" href={props.bptLink} target="_blank">
             Buy Tickets
           </Button>
         )}
