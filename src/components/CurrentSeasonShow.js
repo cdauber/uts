@@ -10,6 +10,7 @@ import Collapse from "@material-ui/core/Collapse"
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
 import IconButton from "@material-ui/core/IconButton"
 import clsx from "clsx"
+import Img from "gatsby-image"
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -56,11 +57,9 @@ export default props => {
   return (
     <Card className={classes.card} variant="outlined">
       {props.imageData && (
-        <CardMedia
-          className={classes.media}
-          image={props.imageData[0].url}
-          title={props.showName}
-        />
+        <CardMedia className={classes.media} title={props.showName}>
+          <Img fluid={props.imageData.localFiles[0].childImageSharp.fluid} />
+        </CardMedia>
       )}
       <CardContent>
         {props.showName && (
@@ -80,7 +79,6 @@ export default props => {
             variant="h6"
             style={{ whiteSpace: "pre-line" }}
           >
-            {console.log(props.showDates)}
             {props.showDates}
           </Typography>
         )}

@@ -14,6 +14,7 @@ module.exports = {
         formats: ["woff", "woff2"],
       },
     },
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -31,14 +32,18 @@ module.exports = {
           {
             baseId: `appOiIAcxkueGFTrJ`, //Current Season
             tableName: `Shows`,
-            tableView: "Grid view",
-            //mapping: { Image: `fileNode` },
+            tableView: "Grid 2",
+            mapping: { Photo: `fileNode` },
           },
           {
             baseId: `appjk9x7FFcrje6So`, // Board Members
             tableName: `Current Members`,
-            tableView: "Grid view",
-            //mapping: { Image: `fileNode` },
+            mapping: { ProfilePic: `fileNode` },
+          },
+          {
+            baseId: `apphiOwmTobf2ahep`, // Default Images
+            tableName: `Default Images`,
+            mapping: { Image: `fileNode` },
           },
         ],
       },
