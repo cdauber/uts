@@ -2,7 +2,7 @@ import React from "react"
 import Header from "../components/Header"
 import CurrentSeasonShow from "../components/CurrentSeasonShow"
 import Grid from "@material-ui/core/Grid"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 const CurrentSeason = () => {
   // Need to add check to ensure data is there.
