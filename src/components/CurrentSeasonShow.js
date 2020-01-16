@@ -56,11 +56,7 @@ export default props => {
 
   return (
     <Card className={classes.card} variant="outlined">
-      {props.imageData && (
-        <CardMedia className={classes.media} title={props.showName}>
-          <Img fluid={props.imageData.localFiles[0].childImageSharp.fluid} />
-        </CardMedia>
-      )}
+      {props.imageData && <Img fluid={props.imageData} />}
       <CardContent>
         {props.showName && (
           <Typography className={classes.title} variant="h5">

@@ -32,10 +32,16 @@ const CurrentSeason = () => {
           }
         }
       }
-      defaultImages: allAirtable(filter: { table: { eq: "Defaults" } }) {
+      defaultImages: allAirtable(
+        filter: {
+          table: { eq: "Default Images" }
+          data: { Name: { eq: "Default Show Scroll" } }
+        }
+      ) {
         edges {
           node {
             data {
+              Name
               Image {
                 localFiles {
                   childImageSharp {
@@ -54,21 +60,28 @@ const CurrentSeason = () => {
   return (
     <div>
       <Header />
-      {console.log(JSON.stringify(data))}
       <div style={{ padding: 20, flexGrow: 1 }}>
         <Grid container spacing={3} style={{ justifyContent: "space-around" }}>
           {data.showData.edges.map(o => {
-            const { Name, Playwright, Director, Photo } = o.node.data
+            const currentShowData = o.node.data
             return (
               <Grid item xs={12} sm={6} md={4}>
+                {console.log(JSON.stringify(data.defaultImages.edges[0].node))}
+
                 <CurrentSeasonShow
-                  imageData={Photo}
-                  showName={Name}
-                  playwright={Playwright}
-                  director={Director}
-                  showDates="testShowDates"
-                  descriptionBlurb="testDescBlurb"
-                  bptLink="testBptLink"
+                  imageData={
+                    currentShowData.Photo
+                      ? currentShowData.Photo.localFiles[0].childImageSharp
+                          .fluid
+                      : data.defaultImages.edges[0].node.data.Image
+                          .localFiles[0].childImageSharp.fluid
+                  }
+                  showName={currentShowData.Name}
+                  playwright={currentShowData.Playwright}
+                  director={currentShowData.Director}
+                  showDates={currentShowData.Show_Dates}
+                  descriptionBlurb={currentShowData.Description_Blurb}
+                  bptLink={currentShowData.Tickets_Link}
                 />
               </Grid>
             )

@@ -32,7 +32,7 @@ module.exports = {
           {
             baseId: `appOiIAcxkueGFTrJ`, //Current Season
             tableName: `Shows`,
-            tableView: "Grid 2",
+            tableView: "All",
             mapping: { Photo: `fileNode` },
           },
           {
