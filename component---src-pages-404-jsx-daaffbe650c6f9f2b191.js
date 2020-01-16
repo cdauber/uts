@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{pssB:function(n,e,t){"use strict";t.r(e);var a=t("q1tI"),u=t.n(a);e.default=function(){return u.a.createElement("div",null,u.a.createElement("p",null," Production 404 Page "))}}}]);
+//# sourceMappingURL=component---src-pages-404-jsx-daaffbe650c6f9f2b191.js.map

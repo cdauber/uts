@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/404.jsx"],"names":[],"mappings":"2FAAA,gCAEe,4BACb,6BACE","file":"component---src-pages-404-jsx-daaffbe650c6f9f2b191.js","sourcesContent":["import React from \"react\"\r\n//TODO complete this page\r\nexport default () => (\r\n  <div>\r\n    <p> Production 404 Page </p>\r\n  </div>\r\n)\r\n"],"sourceRoot":""}
