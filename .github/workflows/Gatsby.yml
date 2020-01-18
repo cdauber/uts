@@ -14,6 +14,7 @@ jobs:
         with:
           node-version: "10.x"
       - run: npm install
+      - run: tree
       # This triggers `gatsby build` script in "package.json"
       - run: npm build
       - run: tree
