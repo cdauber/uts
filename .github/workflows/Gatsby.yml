@@ -15,7 +15,7 @@ jobs:
           node-version: "10.x"
       - run: sudo apt-get install tree
       - run: npm install
-      - run: tree
+      - run: tree tree -I node_modules
       # This triggers `gatsby build` script in "package.json"
       - run: npm build
-      - run: tree
+      - run: tree tree -I node_modules
