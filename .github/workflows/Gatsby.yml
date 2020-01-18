@@ -17,5 +17,5 @@ jobs:
       - run: npm install
       - run: tree -I node_modules
       # This triggers `gatsby build` script in "package.json"
-      - run: npm build
+      - run: npm run-script build
       - run: tree -I node_modules
