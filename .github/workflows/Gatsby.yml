@@ -1,6 +1,8 @@
 name: Gatsby Publish
 
-on: [push]
+push:
+  branches:
+    - master
 
 jobs:
   build:
@@ -13,9 +15,6 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: "10.x"
-      - run: sudo apt-get install tree
       - run: npm install
-      - run: tree -I node_modules
       # This triggers `gatsby build` script in "package.json"
-      - run: npm run-script build
-      - run: tree -I node_modules
+      - run: npm run-script deploy
