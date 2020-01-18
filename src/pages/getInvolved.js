@@ -4,6 +4,6 @@ import Header from "../components/Header"
 export default () => (
   <div>
     <Header />
-    <p>Get Involved Page</p>
+    <p>!!Get Involved Page!</p>
   </div>
 )
