@@ -1,8 +1,8 @@
 name: Gatsby Publish
-
-push:
-  branches:
-    - master
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   build:
