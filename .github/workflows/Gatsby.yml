@@ -13,6 +13,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: "10.x"
+      - run: sudo apt-get install tree
       - run: npm install
       - run: tree
       # This triggers `gatsby build` script in "package.json"
