@@ -22,7 +22,7 @@ const CurrentSeason = () => {
               Photo {
                 localFiles {
                   childImageSharp {
-                    fluid(maxWidth: 400) {
+                    fluid(maxWidth: 500) {
                       ...GatsbyImageSharpFluid
                     }
                   }
