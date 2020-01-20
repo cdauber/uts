@@ -22,4 +22,4 @@ run **gatsby develop**
 
 ## Deployment
 
-Project is deployed every merge to master
+Project is deployed every merge to master.
