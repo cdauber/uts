@@ -66,8 +66,6 @@ const CurrentSeason = () => {
             const currentShowData = o.node.data
             return (
               <Grid item xs={12} sm={6} md={4}>
-                {console.log(JSON.stringify(data.defaultImages.edges[0].node))}
-
                 <CurrentSeasonShow
                   imageData={
                     currentShowData.Photo
